@@ -1,0 +1,36 @@
+@import "allstyles.css";
+
+.about .content h3{
+    font-size: 4rem;
+   color:black;
+}
+.about .content p{
+    font-size: 2rem;
+    color:var(--light-black);
+    line-height: 2;
+    padding:1rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

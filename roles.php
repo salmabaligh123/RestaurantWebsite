@@ -24,7 +24,7 @@ else{
       {
         $_SESSION["Username"]=$_POST['user'];
         $_SESSION["Pass"]=$_POST['pass'];
-       header("Location:../Project/cart.php");  //CASHEIR VIEW
+       header("Location:../Project/mainmenu.php");  //CASHEIR VIEW
         
       }
       elseif ($roles=='cashier'&&$row['enable']=="disable")

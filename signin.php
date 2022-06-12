@@ -67,7 +67,7 @@
                     <input type="password" class="form-control bg-light" name="pass" required="" placeholder="Enter Password">
                   </div>
                   <button id="btn" class="btn btn-dark btn-block shadow-none font-weight-400 my-4" type="submit" value="submit">Sign In</button>
-                  <p class="text-right text-2 text-muted font-weight-300">Not a member?<a class="btn-link font-weight-300" href="signup.html">Sign Up Now </a> </p>
+                  <p class="text-right text-2 text-muted font-weight-300">Not a member?<a class="btn-link font-weight-300" href="SignUp.php">Sign Up Now </a> </p>
                 </form>
               </div>
             </div>

@@ -91,7 +91,7 @@
                   </div>
                   <div class="form-group font-weight-300">
                     <label>Email Address</label>
-                    <input type="text" class="form-control bg-light" name="email" placeholder="Enter Your Email">
+                    <input type="email" class="form-control bg-light" name="email" placeholder="Enter Your Email">
                   </div>
 
                   <div class="form-group font-weight-300">

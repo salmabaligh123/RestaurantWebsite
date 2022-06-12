@@ -1,27 +1,20 @@
 <?php
-
-$connect = new PDO("mysql:host=localhost;dbname=review_table", "root", "");
-
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "cairogrnd";
+$connect = new mysqli($servername, $username, $password, $dbname);
 if(isset($_POST["rating_data"]))
 {
-
 	$data = array(
 		':user_name'		=>	$_POST["user_name"],
 		':user_rating'		=>	$_POST["rating_data"],
 		':user_review'		=>	$_POST["user_review"],
 		':datetime'			=>	time()
 	);
-
-	$query = "
-	INSERT INTO review_table 
-	(user_name, user_rating, user_review, datetime) 
-	VALUES (:user_name, :user_rating, :user_review, :datetime)
-	";
-
+	$query = "INSERT INTO review_table (user_name, user_rating, user_review, datetime) VALUES (:user_name, :user_rating, :user_review, :datetime)";
 	$statement = $connect->prepare($query);
-
 	$statement->execute($data);
-
 	echo "Your Review & Rating Successfully Submitted";
 
 }
@@ -37,13 +30,8 @@ if(isset($_POST["action"]))
 	$total_user_rating = 0;
 	$review_content = array();
 
-	$query = "
-	SELECT * FROM review_table 
-	ORDER BY review_id DESC
-	";
-
+	$query = "SELECT * FROM review_table ORDER BY review_id DESC";
 	$result = $connect->query($query, PDO::FETCH_ASSOC);
-
 	foreach($result as $row)
 	{
 		$review_content[] = array(
@@ -77,15 +65,10 @@ if(isset($_POST["action"]))
 		{
 			$one_star_review++;
 		}
-
 		$total_review++;
-
 		$total_user_rating = $total_user_rating + $row["user_rating"];
-
 	}
-
 	$average_rating = $total_user_rating / $total_review;
-
 	$output = array(
 		'average_rating'	=>	number_format($average_rating, 1),
 		'total_review'		=>	$total_review,
@@ -96,10 +79,6 @@ if(isset($_POST["action"]))
 		'one_star_review'	=>	$one_star_review,
 		'review_data'		=>	$review_content
 	);
-
 	echo json_encode($output);
-
 }
-
-
 ?>

@@ -1,47 +1,39 @@
 @import "allstyles.css";
 
-.form  b{
+.form b {
     font-size: 4rem;
-    color:black;
+    color: black;
     line-height: 2;
-    padding:1rem 0;
+    padding: 1rem 0;
     padding-left: 6rem;
 
 }
-.form input{
+
+.form input {
     padding-left: 6rem;
     border: 16px black;
 }
-.form textarea{
+
+.form textarea {
     padding-left: 6rem;
 }
-.form .names{
-    border: 16px ;
+
+.form .names {
+    border: 16px;
 }
-body{
+
+body {
     background-image: url('c');
 }
 
-
-
-.form .sub a{
-    display:inline-block ;
+.form .sub a {
+    display: inline-block;
     font-size: 4rem;
     margin-left: 2rem;
-    color:var(--black);
+    color: var(--black);
     padding-left: 70rem;
-    
-    
- 
-    
- }
- 
- .form .sub a:hover{
-    color:var(--main-color);
- }
+}
 
-
-
-
-
-
+.form .sub a:hover {
+    color: var(--main-color);
+}

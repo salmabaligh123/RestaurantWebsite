@@ -34,7 +34,7 @@
 					echo"<a href='Delete.php'>'Delete Menu Item</a>";
                     echo"<a href='Update.php'>Update Menu Item</a>";
                     echo"<a href='ViewAll.php'>View All Menu Items</a>";
-                    echo"<a href='Search.php'>Search Menu Item</a>";
+                    echo"<a href='Searchh.php'>Search Menu Item</a>";
 				}
 				else
 				{
@@ -43,7 +43,7 @@
 					echo"<a href='Delete.php'>Delete Menu Item</a>";
                     echo"<a href='Update.php'>Update Menu Item</a>";
                     echo"<a href='ViewAll.php'>View All Menu Item</a>";
-                    echo"<a href='Search.php'>Search Menu Item</a>";
+                    echo"<a href='Searchh.php'>Search Menu Item</a>";
 				}
 				?>
 		</div>

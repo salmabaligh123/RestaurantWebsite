@@ -1,93 +1,83 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
-@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
-:root{
-   --main-color:rgba(246, 200, 84, 0.759);
-   --black:#222;
-   --white:#fff;
-   --light-black:#777;
-   --light-white:#fff9;
-   --dark-bg:rgba(0,0,0,.7);
-   --light-bg:#eee;
-   --border:.1rem solid var(--black);
-   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-   --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="shortcut icon" href="logo4.jpeg" />
+
+<style>
+.form  b{
+    font-size: 4rem;
+    color:white;
+    line-height: 2;
+    padding:1rem 0;
+    padding-left: 6rem;
+    margin-left: 40rem
+    
+
+}
+.form input{
+    color: black;
+    padding-left: 6rem;
+    border: 16px black;
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin-left: 45rem;
+}
+.form input:focus{
+    background-color: rgba(206, 203, 192, 0.526);
+    border: 3px solid rgba(246, 200, 84, 0.759);
+    
+}
+.form textarea{
+  color: black;
+    width: 25%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    margin-left: 45rem;
+}
+.form textarea:focus {
+    background-color: rgba(206, 203, 192, 0.526);
+    border: 3px solid rgba(246, 200, 84, 0.759);
+  }
+.form .names{
+    border: 16px ;
 }
 
-/*******************/
-/* Navbar container */
-.navbar {
-   overflow: hidden;
-   background-color:transparent;
-   font-family: Arial;
- }
- 
- /* Links inside the navbar */
- .navbar a {
-   float: left;
-   font-size: 16px;
-   color: white;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
- }
- 
- /* The dropdown container */
- .dropdown {
-   float: left;
-   overflow: hidden;
- }
- 
- /* Dropdown button */
- .dropdown .dropbtn {
-   font-size: 16px;
-   border: none;
-   outline: none;
-   color: white;
-   padding: 14px 16px;
-   background-color: inherit;
-   font-family: inherit; /* Important for vertical align on mobile phones */
-   margin: 0; /* Important for vertical align on mobile phones */
- }
- 
- /* Add a red background color to navbar links on hover */
- .navbar a:hover{
-    color:black;
- }
- .dropdown:hover .dropbtn {
-   background-color: rgba(246, 200, 84, 0.759);
- }
- 
- /* Dropdown content (hidden by default) */
- .dropdown-content {
-   display: none;
-   position: absolute;
-   background-color: #f9f9f9;
-   min-width: 160px;
-   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-   z-index: 1;
- }
- 
- /* Links inside the dropdown */
- .dropdown-content a {
-   float: none;
-   color: black;
-   padding: 12px 16px;
-   text-decoration: none;
-   display: block;
-   text-align: left;
- }
- 
- /* Add a grey background color to dropdown links on hover */
- .dropdown-content a:hover {
-   background-color: #ddd;
- }
- 
- /* Show the dropdown menu on hover */
- .dropdown:hover .dropdown-content {
 
-   display: block;
+body{
+    background-image: url("grey.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.form  .sub  #submit{
+  display:inline-block;
+  font-size: 16px;
+  color: black;
+  padding: 14px 16px;
+  box-shadow: black;
+  border: 2rem;
+  background: rgba(246, 200, 84, 0.759);
+  margin-left: 8rem;
+  margin-bottom: 3rem;
+  margin-left: 45rem;
+    
+    
+ 
+    
  }
-/*******************/
+ 
+ .form .sub #submit:hover{
+    color:var(--main-color);
+    background: black;
+ }
 
 *{
    font-family: 'Poppins', sans-serif;
@@ -196,9 +186,10 @@ section{
 
 .header .dropdown .content{
     display: none;
-    position: absolute;
-    background-color: wheat;
-    min-width: 10px;
+color:white;
+    position:absolute;
+    background-color: black;
+    /*min-width: 10px;*/
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -206,22 +197,8 @@ section{
     color: black;
     padding: 12px 16px;
     text-decoration: none;
-    display:inline;
+    display:block;
 
-}
-.dropdown .content a:hover{
-    background-color: rgba(246, 200, 84, 0.759); 
-}
-.dropdown:hover .content{
-   display:flex;
-   position:absolute;
-}
-.dropdown:hover .dropbutton{
-    background-color:white;
-    color:rgba(246, 200, 84, 0.759) 
-}
-.navbar .menudrop{
-   display: none;
 }
 
 #menu-btn{
@@ -232,12 +209,10 @@ section{
 }
 
 
-
-
-/*************************/
-/*************************/
+/***************************************************************************/
+/***************************************************************************/
 .footer{
-    background: url('C:\Users\Aziz\Desktop\footerback.jpg') no-repeat;
+    background: url(footerbackcopy.jpg) no-repeat;
     background-size: cover;
     background-position: center;
  }
@@ -283,7 +258,6 @@ section{
  .footer .credit span{
     color:var(--main-color);
  }
-
  
  /* media queries  */
  
@@ -359,3 +333,77 @@ section{
     }
  
  }
+</style>
+
+
+<!-- styling end-->
+
+    <!-- swiper css link  -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="contactus.css" />
+  </head>
+  <body>
+<?php include "header2.php" ?>
+    <div class="form">
+      <form name="formm" action="savecontactus2.php" method="POST">
+        <div class="names">
+          <b>Name:</b> <br />
+          <input
+            type="text"
+            id="contactname"
+            name="username"
+            placeholder="Enter your name here"
+          />
+        </div>
+        <br /><br />
+        <div class="email">
+          <b>Email:</b> <br />
+          <input
+            type="text"
+            id="contactemail"
+            name="email"
+            placeholder="Enter your Email Here"
+          />
+        </div>
+        <br /><br />
+        <div class="contact">
+          <b>Your Message:</b> <br />
+          <textarea
+            aria-label="Comments"
+            name="msg"
+            placeholder="Write Here"
+            rows="7"
+            cols="50"
+            id="contactus"
+            dir="auto"
+            aria-required="true"
+            required="required"
+          ></textarea>
+        </div>
+
+        <br /><br /><br /><br /><br />
+        <div class="sub">
+          <input type="submit" name="submit" id="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+    
+   <?php include "footer.php" ?>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+  </body>
+</html>

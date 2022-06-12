@@ -12,10 +12,8 @@ th.h{
   text-align: left;
 }
 
-
 </style>
 <?php
-
 session_start();
 $status="";
 if (isset($_POST['action']) && $_POST['action']=="remove"){
@@ -98,7 +96,7 @@ if(isset($_SESSION["shopping_cart"])){
 foreach ($_SESSION["shopping_cart"] as $product){
 ?>
 <tr>
-<td><img src='<?php echo $product["photo"]; ?>' width="100" height="100" /></td>
+<td><img src='<?php echo $product["image"]; ?>' width="100" height="100" /></td>
 <td><?php echo $product["name"]; ?><br />
 </td>
 <td>
@@ -114,8 +112,8 @@ foreach ($_SESSION["shopping_cart"] as $product){
 </select>
 </form>
 </td>
-<td><?php echo "$".$product["Price"]; ?></td>
-<td><?php echo "$".$product["Price"]*$product["quantity"]; ?></td>
+<td><?php echo "$".$product["price"]; ?></td>
+<td><?php echo "$".$product["price"]*$product["quantity"]; ?></td>
 <form method='post' action=''>
 <input type='hidden' name='ID' value="<?php echo $product["ID"]; ?>" />
 <input type='hidden' name='action'  value="remove" />
@@ -124,11 +122,11 @@ foreach ($_SESSION["shopping_cart"] as $product){
 </form>
 </tr>
 <?php
-$total_Price += ($product["Price"]*$product["quantity"]);
+$total_Price += ($product["price"]*$product["quantity"]);
 }
 ?>
 <tr>
-<td colspan="5" align="right">
+<td colspan="5" align-text="right">
 <strong>TOTAL: <?php echo "$".$total_Price; ?></strong>
 
 </td>
@@ -151,17 +149,16 @@ $total_Price += ($product["Price"]*$product["quantity"]);
 <input type='hidden' name='action'  value="cancel" />
 <button type='submit' class='cancel'> cancel </button>
 </form>
-<form  action="compose.php" method='post'>
+<form  action="mainmenu.php" method='post'>
 <button class="btn btn-primary btn-purchase"  type="submit">Continue shopping </button>
 </form>
 <h4> Choose your payment method </h4>
-<button class="btn btn-primary btn-purchase"  onclick="window.location.href='cash.html'" type="submit"> cash </button>
-<button class="btn btn-primary btn-purchase" onclick="window.location.href='visa.html'" type="submit"> visa </button>
-
-
+<button class="btn btn-primary btn-purchase"  onclick="window.location.href='cash.php'" type="submit"> cash </button>
+<button class="btn btn-primary btn-purchase" onclick="window.location.href='visa.php'" type="submit"> visa </button>
 
 <br /><br />
 
 </div>
+<?php include "footer.php"; ?>
 </body>
 </html>

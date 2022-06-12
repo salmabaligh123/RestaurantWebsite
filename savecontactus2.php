@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db = "contact_us";
+$db = "cairogrnd";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password,$db);
 if (!$conn) {
@@ -16,9 +16,9 @@ if(!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['msg']
      $usr=$_POST['username'];
      $ems=$_POST['email'];
      $mss=$_POST['msg'];
-    $qu= "INSERT INTO `user`(`username`, `email`, `msg`) VALUES ('$usr','$ems','$mss')";
+    $qu= "INSERT INTO `contact`(`username`, `email`, `msg`) VALUES ('$usr','$ems','$mss')";
     $res=$conn->query($qu);
-    header("Location:../contactus2.php");
+    header("Location:../Project/contactus.php");
     
  }
 }

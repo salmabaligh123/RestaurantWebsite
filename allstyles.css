@@ -62,19 +62,20 @@
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
-   display: none;
+   display: block;
    position: absolute;
    background-color: #f9f9f9;
    min-width: 160px;
    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
    z-index: 1;
+   overflow: auto;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-   float: none;
+   float: center;
    color: black;
-   padding: 12px 16px;
+   padding: 10px;
    text-decoration: none;
    display: block;
    text-align: left;
@@ -87,7 +88,6 @@
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-
    display: block;
 }
 

@@ -82,17 +82,17 @@ foreach ($_SESSION["shopping_cart"] as $product){
 <input type='hidden' name='ID' value="<?php echo $product["ID"]; ?>" />
 </form>
 </td>
-<td><?php echo "$".$product["Price"]*$product["quantity"]; ?></td>
+<td><?php echo "$".$product["price"]*$product["quantity"]; ?></td>
 <form method='post' action=''>
 <input type='hidden' name='ID' value="<?php echo $product["ID"]; ?>" />
 </form>
 </tr>
 <?php
-$total_Price += ($product["Price"]*$product["quantity"]);
+$total_Price += ($product["price"]*$product["quantity"]);
 }
 ?>
 <tr>
-<td colspan="5" align="right">
+<td colspan="5" align-text="right">
 <strong>TOTAL: <?php echo "$".$total_Price; ?></strong>
 </td>
 </tr>
@@ -116,9 +116,9 @@ Thank you for your purchase!
  
 <button id="btn" class="button" onclick="window.location.href='cart.php'">  Edit  </button>
 <script>
-const timeout = setTimeout(myTime, 30000);
+const timeout = setTimeout(myTime, 20000);
 function myTime() {
-  document.getElementById("btn").innerHTML ='<h4 class="b"> Can`t edit </h4>'
+  document.getElementById("btn").innerHTML ='<h4 class="b"> Cant edit </h4>'
   <?php
   if (isset($_POST['action']) && $_POST['action']=="cancel"){
   unset($_SESSION["shopping_cart"]);
@@ -133,7 +133,7 @@ function myTime() {
 <button type='submit' onclick="window.location.href='cart.php'" class='cancel'> Cancel </button>
 </form>
 <form  action='compose.php' method='post'>
-<button class="btn btn-primary btn-purchase" onclick= type="submit"> Done </button>
+<button class="btn btn-primary btn-purchase" type="submit"> Done </button>
 
 </form>
 </p>
